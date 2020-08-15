@@ -51,7 +51,7 @@ const lists = [];
 
 const list = document.querySelector('.detail_book');
 const addButton = document.querySelector('.add-button');
-
+const addForm = document.querySelector('form');
 
 // Creating html (generate the html)
 
@@ -106,70 +106,78 @@ const newStatus = document.querySelector('#status-store');
 let newBs = [];
 
 // Function to generate the new list of book
-const addSomeBook = (e) => {
+function addSomeBook(e) {
 
   e.preventDefault();
-
-  // Creat a copy of the 
-  
-  let filterBook = [...books];
-  
     const newB = {
       
-      title: title.value,
-      author: author.value,
-      genre: genre.value,
-      page: page.value,
+      title : newTitle.value,
+      author : newAuthor.value,
+      genre : newgenre.value,
+      page : newpage.value,
+      
       
 
     };
     newBs.push(newB);
-
-   
+    
+    e.target.reset();
+    list.dispatchEvent(new CustomEvent('itemUpdated'));
     addSomeBook();
   }
   
   
 
 // Creat html for the new list
-
-  const myHtml = `
+  const displayItems = () => {
+    const myHtml = newBs.map(newB => `
   <ul class="list-new-detail" >
             <li class = "title-book">
-             ${title.value}
+             ${newB.title}
             </li>
             <li class = "author-book">
-             ${author.value}
+             ${newB.author}
             </li>
             <li class = "genre-book">
-              ${genre.value}
+              ${newB.genre}
             </li>
             <li class = "page-book">
-              ${pages.value}
+              ${newB.page}
             </li>
             <li class = "check-book">
               <fieldset>
-                <input type="checkbox" id="${book.id}" />
+                <input type="checkbox" id="${newB.id}" />
               </fieldset>
             </li>
             <li>
-            <img class = "icon" src = "./assets/delete.png" alt = "delete">
+            <img class = "icon" src = "./assets/delete.png" alt = "delete" id="delete">
             </li>
       </ul>
-  `
+  `)
+  .join('');
+   
 
-  list.innerHTML = myHtml;
+  list.innerHTML += myHtml;
+  
+  };
+
+  list.addEventListener('itemUpdated', displayItems);
 
 // Fuction for deleting the items
 
 
 const deleteItime = () => {
-  newBs = newBs
+  newBs = newBs.filter(newB => newB.id !== id);
+  list.dispatchEvent(new CustomEvent('itemUpdated'));
 }
 
+list.addEventListener('click', function (e) {
+  const id = (e.currentTarget.value);
+  if (e.target.matches('img')) {
+    deleteItem(e.currentTarget.value);
+  }
+  id();
+});
 
-
-// Listen to the button 
-
-form.addEventListener('click', addSomeBook)
+form.addEventListener('submit', addSomeBook);
 
