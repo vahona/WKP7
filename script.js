@@ -90,8 +90,86 @@ const html = books.map(book => {
 loadSomeBook();
 
 
+// Grabe some element in html which relate to the input form
+
+const form = document.querySelector('.select');
+
+
+const newTitle = document.querySelector('#title-store');
+const newAuthor = document.querySelector('#author-store');
+const newgenre = document.querySelector('#genre-store');
+const newpage = document.querySelector('#pagenumber-store');
+const newStatus = document.querySelector('#status-store');
+
+// Array 
+
+let newBs = [];
+
+// Function to generate the new list of book
+const addSomeBook = (e) => {
+
+  e.preventDefault();
+
+  // Creat a copy of the 
+  
+  let filterBook = [...books];
+  
+    const newB = {
+      
+      title: title.value,
+      author: author.value,
+      genre: genre.value,
+      page: page.value,
+      
+
+    };
+    newBs.push(newB);
+
+   
+    addSomeBook();
+  }
+  
+  
+
+// Creat html for the new list
+
+  const myHtml = `
+  <ul class="list-new-detail" >
+            <li class = "title-book">
+             ${title.value}
+            </li>
+            <li class = "author-book">
+             ${author.value}
+            </li>
+            <li class = "genre-book">
+              ${genre.value}
+            </li>
+            <li class = "page-book">
+              ${pages.value}
+            </li>
+            <li class = "check-book">
+              <fieldset>
+                <input type="checkbox" id="${book.id}" />
+              </fieldset>
+            </li>
+            <li>
+            <img class = "icon" src = "./assets/delete.png" alt = "delete">
+            </li>
+      </ul>
+  `
+
+  list.innerHTML = myHtml;
+
+// Fuction for deleting the items
+
+
+const deleteItime = () => {
+  newBs = newBs
+}
+
+
 
 // Listen to the button 
 
-addButton.addEventListener('click', addSomeBook)
+form.addEventListener('click', addSomeBook)
 

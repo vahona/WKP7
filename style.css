@@ -67,7 +67,8 @@ button {
     border-radius: 5px;
 }
 
-.list-detail {
+.list-detail,
+.list-new-detail {
      display: flex;
     justify-content: space-between;
     /* margin-inline-start: -4rem; */
@@ -90,6 +91,8 @@ button {
 .title-book {
     width: 200px;
     
+    
+    
 }
 
 .author-book,
@@ -98,3 +101,4 @@ page-book,
 check-book {
   margin-inline-start: -10rem;
 }
+

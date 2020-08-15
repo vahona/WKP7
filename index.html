@@ -16,32 +16,32 @@
     </h1>
     <div class="add-field">
       <h2>Add a book</h2>
-      <form action="select">
+      <form class="select">
         <ul class="list">
           <li>
             <label for="title">Book title</label><br>
-            <input type="text" value="Title" id="title">
+            <input type="text" value="Title" id="title-store" required>
           </li>
           <li>
             <label for="author">Book author</label><br>
-            <input type="text" value="Author" id="author">
+            <input type="text" value="Author" id="author-store" required>
           </li>
           <li>
             <label for="genre">Book genre</label><br>
-            <select name="genre" id="genre">
-              <option value=""> Book genre </option>
-              <option value=""> Fantasy </option>
-              <option value=""> Fiction </option>
-              <option value=""> Memoir </option>
+            <select name="genre" id="genre-store">
+              <option value="genre"> Book genre </option>
+              <option value="fantasy"> Fantasy </option>
+              <option value="fiction"> Fiction </option>
+              <option value="memoir"> Memoir </option>
             </select>
           </li>
           <li>
             <label for="pagenumber">Book pages</label><br>
-            <input type="text" value="number of pages" id="pagenumber">
+            <input type="text" value="number of pages" id="pagenumber-store" required>
           </li>
           <li>
             <label for="status">Status</label><br>
-            <select name="genre" id="status">
+            <select name="genre" id="status-store">
               <option value=""> Status </option>
               <option value=""> Read </option>
               <option value=""> Not read</option>
