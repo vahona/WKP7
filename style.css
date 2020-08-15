@@ -66,3 +66,35 @@ button {
     padding: 1rem;
     border-radius: 5px;
 }
+
+.list-detail {
+     display: flex;
+    justify-content: space-between;
+    /* margin-inline-start: -4rem; */
+    background-color: white;
+     border-radius: 5px;
+     padding-left: 1rem;
+     padding: 1rem;
+     border-top: gray 1px solid;
+}
+
+
+
+.detail_book {
+    
+    margin-inline-start: 4rem;
+    border-radius: 5px;
+    margin-inline-end: 4rem;
+}
+
+.title-book {
+    width: 200px;
+    
+}
+
+.author-book,
+genre-book,
+page-book,
+check-book {
+  margin-inline-start: -10rem;
+}
