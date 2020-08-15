@@ -1,13 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="reset.css" />
-		<link rel="stylesheet" href="style.css" />
-		<title>WKP7</title>
-	</head>
-	<body>
-		<script src="script.js"></script>
-	</body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>WKP7</title>
+</head>
+
+<body>
+  <div>
+    <h1>
+      Library
+    </h1>
+    <div class="add-field">
+      <h2>Add a book</h2>
+      <form action="select">
+        <ul class="list">
+          <li>
+            <label for="title">Book title</label><br>
+            <input type="text" value="Title" id="title">
+          </li>
+          <li>
+            <label for="author">Book author</label><br>
+            <input type="text" value="Author" id="author">
+          </li>
+          <li>
+            <label for="genre">Book genre</label><br>
+            <select name="genre" id="genre">
+              <option value=""> Book genre </option>
+              <option value=""> Fantasy </option>
+              <option value=""> Fiction </option>
+              <option value=""> Memoir </option>
+            </select>
+          </li>
+          <li>
+            <label for="pagenumber">Book pages</label><br>
+            <input type="text" value="number" id="pagenumber">
+          </li>
+          <li>
+            <label for="status">Status</label><br>
+            <select name="genre" id="status">
+              <option value=""> Status </option>
+              <option value=""> Read </option>
+              <option value=""> Not read</option>
+              <option value=""> Half read </option>
+            </select>
+          </li>
+          <li>
+            <button>Add</button>
+          </li>
+        </ul>
+      </form>
+    </div>
+    <div>
+      <nav>
+        <ul class="header-list">
+          <li>title</li>
+          <li>author</li>
+          <li>genre</li>
+          <li>pages</li>
+          <li>Read</li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
 </html>
