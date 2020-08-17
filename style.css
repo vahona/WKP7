@@ -1,5 +1,6 @@
 html {
     background-color: rgb(224, 219, 219);
+    
 }
 
 h1 {
@@ -90,6 +91,8 @@ button {
 
 .title-book {
     width: 200px;
+    overflow-wrap: break-word;
+   
     
     
     
