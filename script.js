@@ -122,7 +122,7 @@ function addSomeBook(e) {
     
     e.target.reset();
     list.dispatchEvent(new CustomEvent('itemUpdated'));
-    addSomeBook();
+    // addSomeBook();
   }
   
   
