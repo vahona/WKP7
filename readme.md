@@ -4,21 +4,37 @@
 ## 1. In a few sentences,  explain the structure of your project.
 
    - First I creat an object
-   - I creat empty array 
-   - 
+   - Grabing some element which I might I need
+   - Creating function to generate to load the book and creating html
+   - Create an empty array
+   - Fuction to generate the new book and grabing some element which icluding the new book
+   - Add event listener to the form
+   - Creat function for deleting the book, which is does not working. 
 
 ## 2. If you had more time, what area of your project would you improve?
 
+   - If I had more time, I would probably debage my code in adding book which is strange because it add 2 books at the same time when I add the second book
+   - To make my code responsive
+   - Then I would look for the causing error in my code, "preventDefault not found";
+
 ## 3. Did you learn anything new while working on this project?
+
+   - This is the time that I fully confident to use map methode which I did not understand before.
 
 ## 4. What was the most challenging part for you?
 
+   - To use the right methode in one event.
+   - To fully understand what the real requirement.
+
+
 ## 5. Would you like a new explanation about a specific topic?
+
+   - Could you please explain more about filter, reduce if it is possible.
+   - Also could you please explain more about "dispatchEvent" if it is possible.
 
 ## 6. Any other comments?
 
-
-
+   - When we did small exercise about map, filter, reduce ..., It seems clear but when it comes to the big project I don't know when I should use them.
 
 
 

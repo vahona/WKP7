@@ -45,7 +45,6 @@ const books = [
     },
 ];
 
-const lists = [];
 
 // Grabing some Element I might need
 
